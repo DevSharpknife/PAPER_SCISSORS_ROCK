@@ -5,5 +5,6 @@ from app import app
 def index():
     return render_template('index.html', title='Home')
 
-@app.route('/<choice_1>/<choice_2>', methods=['POST'])
-def play_rps():
+# @app.route('/<choice_1>/<choice_2>', methods=['POST'])
+# def play_rps():
+    

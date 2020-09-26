@@ -8,16 +8,16 @@ class Game():
         if player_1.choice == player_2.choice:
             return "DRAW!"
         elif player_1.choice == "Paper" and player_2.choice == "Scissors":
-            return f"{player_2.name} wins!"
+            return f"{player_2.name} Wins!"
         elif player_1.choice == "Paper" and player_2.choice == "Rock":
-            return f"{player_1.name} wins!"
+            return f"{player_1.name} Wins!"
         elif player_1.choice == "Scissors" and player_2.choice == "Paper":
-            return f"{player_1.name} wins!"
+            return f"{player_1.name} Wins!"
         elif player_1.choice == "Scissors" and player_2.choice == "Rock":
-            return f"{player_2.name} wins!"
-        elif player_1.choice == "Rock" and player_2.choice == "Rock":
-            return f"{player_1.name} wins!"
-        elif player_1.choice == "Rock" and player_2.choice == "Rock":
-            return f"{player_1.name} wins!"
+            return f"{player_2.name} Wins!"
+        elif player_1.choice == "Rock" and player_2.choice == "Paper":
+            return f"{player_2.name} Wins!"
+        elif player_1.choice == "Rock" and player_2.choice == "Scissors":
+            return f"{player_1.name} Wins!"
         else:
-            return "DOES NOT COMPUTE!!!!""
+            return "DOES NOT COMPUTE!!!!"
