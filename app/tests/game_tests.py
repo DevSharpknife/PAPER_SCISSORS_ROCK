@@ -10,4 +10,4 @@ class TestGame(unittest.TestCase):
             self.game = Game(self.player_1, self.player_2)
 
     def test_battle(self):
-        self.assertEqual("Player 1 Wins!", self.game.result)
+        self.assertEqual("Other Dave Wins!", self.game.battle())
