@@ -22,3 +22,9 @@ class TestGame(unittest.TestCase):
         self.P4 = Player("William", "Scissors")
         self.game_3 = Game(self.P3, self.P4) 
         self.assertEqual("DRAW!", self.game_3.battle(self.P3, self.P4))
+
+    def test_battle__invalid_response(self):
+        self.P5 = Player("Man In Black", "Dammit I'm Mad")
+        self.P4 = Player("William", "Scissors")
+        self.game_4 = Game(self.P5, self.P4) 
+        self.assertEqual("DOES NOT COMPUTE!!!!", self.game_4.battle(self.P5, self.P4))
