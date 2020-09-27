@@ -11,5 +11,8 @@ def index():
 def battle():
     return render_template('battle.html', title='READY FOR BATTLE?')
 
-# @app.route('/<choice_1>/<choice_2>', methods=['POST'])
-# def play_rps():
+@app.route('/<choice_1>/<choice_2>', methods=['POST'])
+def play_rps():
+    player_1 = Player(request.form['P1_name'], request.form['P1_choice'])
+    player_2 = Player(request.form['P2_name'], request.form['P2_choice'])
+    

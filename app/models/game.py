@@ -4,7 +4,7 @@ class Game():
         self.player_1 = player_1
         self.player_2 = player_2
 
-    def fight(self, choice_1, choice_2):
+    def fight(self, player_1, player_2):
         if self.player_1.choice == self.player_2.choice:
             return "DRAW!"
         elif self.player_1.choice == "Paper" and self.player_2.choice == "Scissors":
