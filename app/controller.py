@@ -11,11 +11,10 @@ def index():
 def battle():
     return render_template('battle.html', title='READY FOR BATTLE?')
 
-@app.route('/<choice_1>/<choice_2>', methods=['POST'])
-def play_rps():
+@app.route('/result', methods=['GET','POST'])
+def result():
     player_1 = Player(request.form['P1_name'], request.form['P1_choice'])
-    player_2 = Player(request.form['P2_name'], request.form['P2_choice'])
-    game = Game()
+    player_2 = Player(request.form['P2_name'], request.form['P2_choice']) 
+    game = Game(player_1, player_2)
     fight_card = game.fight(player_1, player_2)
-    
-    return render_template('battle.html', fight_card=fight_card)
+    return render_template('result.html', fight_card=fight_card)
