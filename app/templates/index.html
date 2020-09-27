@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <header>
-        <h1>PAPER SCISSORS ROCK!</h1>
-        <nav>
-            <ul>
-                <li class='headLink'><a href="/">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <article>
-        <form class="form-block" action="/result" method="POST">
-                <label for="P1_name">PLAYER 1</label>
-                <input type="text" name="name1" id="name" placeholder="Enter Pseudonym" required>
-                <label for="P1_choice">MAKE YOUR CHOICE</label>
-                <select name="P1_choice" id="choice" >
-                    <option value="">--POSITION YOUR HAND--</option>
-                    <option value="paper">Paper</option>
-                    <option value="Scissors">Scissors</option>
-                    <option value="rock">Rock</option>
-                </select>
-                <br>
-                <br>
-                <label for="P2_name">PLAYER 2</label>
-                <input type="text" name="name2" id="name" placeholder="Enter Pseudonym">
-                <label for="P2_choice">MAKE YOUR CHOICE</label>
-                <select name="P2_choice" id="choice" >
-                    <option value="">--POSITION YOUR HAND--</option>
-                    <option value="paper">Paper</option>
-                    <option value="Scissors">Scissors</option>
-                    <option value="rock">Rock</option>
-                </select>
-                <br>
-                <br>
-                <input type="submit">
-        </form>
-    </article>
-    <footer>
-        <nav>
-            <ul>
-                <li class='footLink'><a href="/">Home</a></li>
-            </ul>
-        </nav>
-    </footer>
-
-</body>
-
-</html>
+{% block rules %}
+    <main>
+        <hgroup>
+            <h2>YOU ARE ENTERING A WORLD OF PAIN.</h2>
+            <h3>WELCOME TO PAPER SCISSORS ROCK!</h3>
+        </hgroup>
+        <p>Paper, Scissors, Rock or "Pisser" for short is a game older than any other on record. Mankind have used it to solve disputes for fucking ages. The first known record of it is on the cave paintings found on the island of Orkney, where they would use the game to decide who was eaten that week, though it is believed to predate humans entirely. The very earliest primates used a rudimentary version of the game - albeit a more violent variation, but still abiding by the same basic rules of the modern game. Participants attacked their opponents with either feet (paper), fangs (scissors) or fists (rock...obviously) and decided who won by comparing the combatants choices. Some scholars theorise that the rules were rarely followed, so it was very difficult to distinguish from a rather savage mauling.</p>
+        <p>We have created a way for you to enjoy this ancient game without the need for violence or even lifting your hands, except to the keyboard. Sorry.</p>
+        <p>ARE YOU READY TO PLAY PAPER SCISSORS ROCK?</p>
+        <nav><a class="battleLink" href="/battle">LET BATTLE COMMENCE!!!</a></nav>
+    </main>
+{% endblock %}

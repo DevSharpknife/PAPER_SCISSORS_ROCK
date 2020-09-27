@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block battle %}
+    <main>
+        <form class="form-block" action="/result" method="POST">
+                <label for="P1_name">PLAYER 1</label>
+                <input type="text" name="name1" id="name1" placeholder="Enter Pseudonym" required>
+                <label for="P1_choice">MAKE YOUR CHOICE</label>
+                <select name="P1_choice" id="choice2" >
+                    <option value="">--SHOW YOUR HAND--</option>
+                    <option value="paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                    <option value="rock">Rock</option>
+                </select>
+                <br>
+                <br>
+                <label for="P2_name">PLAYER 2</label>
+                <input type="text" name="name2" id="name2" placeholder="Enter Pseudonym">
+                <label for="P2_choice">MAKE YOUR CHOICE</label>
+                <select name="P2_choice" id="choice2" >
+                    <option value="">--SHOW YOUR HAND--</option>
+                    <option value="paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                    <option value="rock">Rock</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit">
+        </form>
+    </main>
+
+{% endblock %}

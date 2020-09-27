@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header>
+        <h1>PAPER SCISSORS ROCK!</h1>
+        <nav>
+            <ul>
+                <li class='headLink'><a href="/">Home</a></li>
+                <li class="battleLink"><a href="/battle">DO BATTLE!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block battle %} {% endblock %}
+
+    {% block rules %} {% endblock %}
+
+    <footer>
+        <nav>
+            <ul>
+                <li class='footLink'><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
