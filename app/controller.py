@@ -15,4 +15,7 @@ def battle():
 def play_rps():
     player_1 = Player(request.form['P1_name'], request.form['P1_choice'])
     player_2 = Player(request.form['P2_name'], request.form['P2_choice'])
+    game = Game()
+    fight_card = game.fight(player_1, player_2)
     
+    return render_template('battle.html', fight_card=fight_card)

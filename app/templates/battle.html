@@ -2,7 +2,7 @@
 
 {% block battle %}
     <main>
-        <form class="form-block" action="/result" method="POST">
+        <form class="form-block" action="/" method="POST">
                 <label for="P1_name">PLAYER 1</label>
                 <input type="text" name="P1_name" id="P1_name" placeholder="Enter Pseudonym" required>
                 <label for="P1_choice">MAKE YOUR CHOICE</label>
@@ -25,8 +25,10 @@
                 </select>
                 <br>
                 <br>
-                <input type="submit">
+                <input type="submit" value="WHO SHALL PREVAIL?"> 
         </form>
+
+        {{ fight_card }}
     </main>
 
 {% endblock %}
