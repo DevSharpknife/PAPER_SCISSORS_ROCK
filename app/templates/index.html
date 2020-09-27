@@ -10,29 +10,43 @@
 <body>
     <header>
         <h1>PAPER SCISSORS ROCK!</h1>
+        <nav>
+            <ul>
+                <li class='headLink'><a href="/">Home</a></li>
+            </ul>
+        </nav>
     </header>
     <article>
-        <p>THIS SHOULD BE DISPLAYED ON THE SCREEN BUT I AM NOT SURE IF IT IS WORKING</p>
-        <form class="form-block" action="/{{ player_1.choice }}/{{ player_2.choice" method="POST">
-            <div>
+        <form class="form-block" action="/result" method="POST">
                 <label for="P1_name">PLAYER 1</label>
-                <input type="text" name="name1" id="name" placeholder="Player One Enter Name" required>
-            </div>
-            <div>
+                <input type="text" name="name1" id="name" placeholder="Enter Pseudonym" required>
                 <label for="P1_choice">MAKE YOUR CHOICE</label>
-                <select name="P1_choice" id="choice"></select>
-            </div>
-            <div>
+                <select name="P1_choice" id="choice" >
+                    <option value="">--POSITION YOUR HAND--</option>
+                    <option value="paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                    <option value="rock">Rock</option>
+                </select>
+                <br>
+                <br>
                 <label for="P2_name">PLAYER 2</label>
-                <input type="text" name="name2" id="name" placeholder="Player Two Enter Name">
-            </div>
-
+                <input type="text" name="name2" id="name" placeholder="Enter Pseudonym">
+                <label for="P2_choice">MAKE YOUR CHOICE</label>
+                <select name="P2_choice" id="choice" >
+                    <option value="">--POSITION YOUR HAND--</option>
+                    <option value="paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                    <option value="rock">Rock</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit">
         </form>
     </article>
     <footer>
         <nav>
             <ul>
-                <li class='navLink'><a href="/">Home</a></li>
+                <li class='footLink'><a href="/">Home</a></li>
             </ul>
         </nav>
     </footer>
