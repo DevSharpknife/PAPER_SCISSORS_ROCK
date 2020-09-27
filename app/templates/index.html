@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>PAPER SCISSORS ROCK!</h1>
     </header>
-    <p>THIS SHOULD BE DISPLAYED ON THE SCREEN BUT I AM NOT SURE IF IT IS WORKING</p>
+    <article>
+        <p>THIS SHOULD BE DISPLAYED ON THE SCREEN BUT I AM NOT SURE IF IT IS WORKING</p>
+        <form class="form-block" action="/{{ player_1.choice }}/{{ player_2.choice" method="POST">
+            <div>
+                <label for="P1_name">PLAYER 1</label>
+                <input type="text" name="name1" id="name" placeholder="Player One Enter Name" required>
+            </div>
+            <div>
+                <label for="P1_choice">MAKE YOUR CHOICE</label>
+                <select name="P1_choice" id="choice"></select>
+            </div>
+            <div>
+                <label for="P2_name">PLAYER 2</label>
+                <input type="text" name="name2" id="name" placeholder="Player Two Enter Name">
+            </div>
+
+        </form>
+    </article>
+    <footer>
+        <nav>
+            <ul>
+                <li class='navLink'><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </footer>
+
 </body>
+
 </html>
