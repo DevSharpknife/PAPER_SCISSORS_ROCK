@@ -16,5 +16,5 @@ def result():
     player_1 = Player(request.form['P1_name'], request.form['P1_choice'])
     player_2 = Player(request.form['P2_name'], request.form['P2_choice']) 
     game = Game(player_1, player_2)
-    fight_card = game.fight(player_1, player_2)
+    fight_card = game.fight()
     return render_template('result.html', fight_card=fight_card)
